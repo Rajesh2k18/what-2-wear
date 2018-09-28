@@ -5,16 +5,19 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 
 exports.user_signup = (req, res, next) => {
+  console.log("@@@@@@@@@",req);
   User.find({ email: req.body.email })
     .exec()
-    .then(user => {
+    .then(user => {console.log("test1")
+      console.log("############",user)
       if (user.length >= 1) {
         return res.status(409).json({
           message: "Mail exists"
         });
       } else {
+        console.log("test2")
         bcrypt.hash(req.body.password, 10, (err, hash) => {
-          if (err) {
+          if (err) {console.log("test3")
             return res.status(500).json({
               error: err
             });

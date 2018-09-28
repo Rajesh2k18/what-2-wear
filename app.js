@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const methodOverride = require("method-override")
 const User = require("./models/user");
 const Closet = require("./models/closet");
 const Clothes = require("./models/clothes");
@@ -18,7 +19,7 @@ const clothesRoutes = require("./routes/clothes");
 const closetRoutes = require("./routes/closets");
 
    
-mongoose.connect("mongodb://process.env.url");
+mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.Promise = global.Promise;
 
