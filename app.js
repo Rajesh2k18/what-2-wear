@@ -18,7 +18,7 @@ const clothesRoutes = require("./routes/clothes");
 const closetRoutes = require("./routes/closets");
 
    
-mongoose.connect("mongodb://rajesh2k18:priyakunu18@ds117773.mlab.com:17773/what-2-wear");
+mongoose.connect("mongodb://process.env.url");
 
 mongoose.Promise = global.Promise;
 

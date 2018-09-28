@@ -1,5 +1,6 @@
 {
     "env": {
-        "JWT_KEY": "secret"
+        "JWT_KEY": "secret",
+        "url": "rajesh2k18:priyakunu18@ds117773.mlab.com:17773/what-2-wear"
     }
 }
