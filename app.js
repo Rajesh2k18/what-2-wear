@@ -7,10 +7,11 @@ const Clothes = require("./models/clothes");
 
 const app = express();
 app.get("/", (req, res) => {
-  res.status(200).json({
+  /*res.status(200).json({
     message: "Welcome Page"
-  })
-})
+  })*/
+  res.send("Welcome to What-2-Wear");
+});
 
 const userRoutes = require("./routes/user");
 const clothesRoutes = require("./routes/clothes");
